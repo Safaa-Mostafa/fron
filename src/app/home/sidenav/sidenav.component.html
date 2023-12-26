@@ -1,0 +1,6 @@
+<mat-list role="list" *ngIf="this.loginFlag">
+  <mat-list-item  color = "primary" role="listitem" class="contact-names" *ngFor="let option of sideNavContent"
+   routerLink="/{{option.link}}" routerLinkActive="active">
+   <span style="color:black;">    {{option.title | titlecase}}</span>
+  </mat-list-item>
+</mat-list>

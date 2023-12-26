@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-expand-lg  navbarColor p-3">
+  <div class="container d-flex">
+    <a class="navbar-brand white-text" routerLink="/user/home">RentalCars</a>
+    <input type="text" placeholder="location" class="search">
+    <div>
+      <a class="navbar-brand white-text" class="p-2" routerLink="/user/home/cars">Cars</a>
+      <a class="navbar-brand white-text" class="p-2" routerLink="/user/home/about">About</a>
+      <a class="navbar-brand white-text" class="p-2" routerLink="/user/home/contact">Contact</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle p-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../../../assets/5340287_man_people_person_user_users_icon.png" alt="">
+          </a>
+          <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" *ngIf="api.loginFlag" routerLink="/user/home/profile">Welcome {{ this.userInfo.name}}</a></li>
+            <li><a class="dropdown-item" *ngIf="api.loginFlag" style="cursor:pointer" (click)="handleLogout()">Logout</a></li>
+            <li><a class="dropdown-item" *ngIf="api.loginFlag" style="cursor:pointer" (click)="deleteAccount()">deleteAccount</a></li>
+            <li><a class="dropdown-item" href="#">Become a host</a></li>
+            <li><hr class="dropdown-divider">How Turo work</li>
+            <li><a class="dropdown-item" href="#">Contact Support</a></li>
+            <li><a class="dropdown-item" href="#">Terms of service</a></li>
+
+          </ul>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,46 @@
+<div class="container-form-login">
+
+  <form #addUser="ngForm" class="loginform" (ngSubmit)="AddUser(addUser)">
+
+         <div className="brand">
+             <h1 class="login-title">Sign up</h1>
+         </div>
+         <input
+         type="text"
+         class="input-user"
+         placeholder="Username"
+         #name class="form-control"
+          id="name"
+           #title="ngModel"
+           [(ngModel)]="userData.name"
+            required
+         name="username"
+         />
+         <input
+         type="email"
+         class="input-user"
+         #email class="form-control" id="email" #title="ngModel" [(ngModel)]="userData.email" required
+         placeholder="Email"
+         name="email"
+         />
+         <input
+         type="password"
+         placeholder="Password"
+         class="input-user"
+         #password class="form-control" id="password" #title="ngModel" [(ngModel)]="userData.password" required
+         name="password"
+         />
+         <input
+         type="password"
+         placeholder="Confirm password"
+         class="input-user"
+         #confirmpassword class="form-control" id="confirmpassword" #title="ngModel" [(ngModel)]="userData.ConfirmPassword" required
+
+         name="confirmPassword"
+         />
+
+         <button type="submit" class="login">Sign up</button>
+             <span class="msg-login"><a routerLink="">aleardy have an account </a></span>
+             </form>
+         </div>
+

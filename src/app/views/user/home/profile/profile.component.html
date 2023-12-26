@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<section class="d-flex justify-content-lg-around align-content-center align-items-center">
+  <div class="card m-4 flex-1 col-6">
+    <img src="{{this.global.urlPath}}{{Data.image}}"  style="width:100%">
+    <h1>{{Data.name}}</h1>
+    <p class="title">{{Data.email}}</p>
+    <a href="#"><i class="ri:facebook-circle-fill"></i></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <p><button>Contact</button></p>
+
+  </div>
+  <div class="flex-1 col-6">
+    <h2> Orders</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>no.</th>
+        <th scope="col">CarImage</th>
+        <th scope="col">name</th>
+        <th scope="col">dailyRental</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of order ;let i=index" >
+        <th scope="row" >{{i+1}}</th>
+        <td><img src="{{this.global.urlPath}}{{car.image}}" class=" h-25" alt=""></td>
+        <td class="w-25">{{car.name}}</td>
+        <td>{{car.dailyRentalRate}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  </section>
+  <div class="card text-total">
+    total price {{this.total}}
+    </div>
+    <app-footer>
+    </app-footer>

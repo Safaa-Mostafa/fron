@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+<section class="d-flex align-content-center justify-content-center p-5">
+  <div class="col-lg-4 m-3 img" >
+    <img src="{{api.urlPath}}{{car.image}}" alt=""  class="w-100"/>
+  </div>
+  <div class="col-lg-6 ">
+    <div class="car__info m-3">
+      <h2 class="section__title">{{car.name}}</h2>
+
+      <div class=" d-flex align-items-center gap-5 mb-4 mt-3">
+        <h6 class="section__subtitle">
+          ${{car.dailyRentalRate}}/day
+        </h6>
+        <span class=" d-flex align-items-center gap-2">
+          <span style="color: #f9a826">
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+          </span>
+        </span>
+
+      </div>
+      <h6 class="section__subtitle text-capitalize">
+        {{userData.name}}
+      </h6>
+
+      <div
+        class=" d-flex align-items-center mt-3">
+        <span class=" d-flex align-items-center gap-1 section__description">
+          <i
+            class="ri-roadster-line"
+            style="color: #f9a826"
+          ></i>
+{{car.transmission}}
+        </span>
+        <span class=" d-flex align-items-center gap-1 section__description">
+          <i
+            class="ri-settings-2-line"
+            style=" color: #f9a826"
+          ></i>
+          {{car.airConditioner}}
+        </span>
+
+        <span class=" d-flex align-items-center gap-1 section__description">
+          <i class="ri-map-pin-line" style="color: #f9a826"></i>
+        {{car.city}}
+          {{car.country}}
+        </span>
+      </div>
+
+      <div
+        class=" d-flex align-items-center mt-3"
+
+      >
+        <span class=" d-flex align-items-center gap-1 section__description">
+          <i
+          class="ri-wheelchair-line"
+          style="  color: #f9a826"
+        ></i> {{car.numberOfDoors}}Doors
+                <i
+                class="ri-building-2-line"
+                style=" color:#f9a826"
+              ></i>{{car.numberInStock}} in stock
+       </span>
+
+      </div>
+
+</div>
+<button class="btn btn-primary" *ngIf="this.token" (click)="orderData()">Reserve Now</button>
+
+</div>
+
+
+
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,28 @@
+<div class="container-form-login">
+
+  <form class="loginform" #LoginForm="ngForm" (ngSubmit)="LoginHandle(LoginForm)">
+  <div className="brand">
+      <h1 class="login-title">Sign in</h1>
+  </div>
+  <input
+  type="email"
+  class="user-input"
+  placeholder="Email"
+  name="email"
+  #email="ngModel"
+     [(ngModel)]="Login.email"
+      required email
+  />
+  <input
+  type="password"
+  placeholder="Password"
+  class="user-input"
+  name="password"
+  #password="ngModel" required [(ngModel)]="Login.password"
+  />
+<button type="submit" class="login">Login</button>
+      <span class="msg-login d-flex flex-nowrap"><a routerLink="/register" class="flex-1 w-50">don't have an account</a>  <a class="w-50 flex-1"routerLink="/editPass">Forget Password</a>
+      </span>
+      </form>
+  </div>
+

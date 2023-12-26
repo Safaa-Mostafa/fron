@@ -1,0 +1,125 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+            <div class="image">
+  <div class="overlay">
+  <form  #searching="ngForm" (ngSubmit)="searchHandle(searching)" name="search">
+  <div class="overlay-form col-9 ">
+
+  <div class="d-flex">
+    <div class=" me-2 sel">
+    <label for="validationCustom04" class="form-label">Country</label>
+    <select class="form-select " id="validationCustom04" name="country"[(ngModel)]="search.country" required  >
+    <option selected >Country</option>
+    <option *ngFor="let dt of countries" [value]="dt.name">{{dt.name}}</option>
+    </select>
+    </div>
+  <div class=" me-2  sel">
+    <label for="validationCustom04" class="form-label">City</label>
+    <select class="form-select" id="validationCustom04" name="city"[(ngModel)]="search.city"  required>
+      <option selected   required city>City</option>
+      <option *ngFor="let city of cities" [value]="city.name" >{{city.name}}</option>
+    </select>
+  </div>
+  </div>
+  <div class="d-flex">
+  <div class="rental-start p-1">
+     <div><span>Rental start</span></div>
+     <div>
+      <input type="date" value="1980-08-26"  #dateStart="ngModel" name="startDate"
+      [(ngModel)]="search.startDate" required startDate>
+    </div>
+  </div>
+  <div class="rental-end p-1">
+  <div><span>Rental end</span></div>
+  <div>
+   <input type="date" value="1980-08-26" #dateEnd="ngModel" name="endDate"
+   [(ngModel)]="search.endDate" required endDate >
+  </div>
+  </div>
+  </div>
+  <input type="submit" value="Search" class="search-btn">
+  </div>
+  </form>
+        </div>
+        </div>
+      </div>
+  <!-- -->
+
+
+
+  <!--  -->
+  <div class="container d-flex p-5">
+    <div class="row">
+          <div class="col-lg-6 col-md-6">
+          <div class="about__section-content">
+            <h4 class="section__subtitle">About Us</h4>
+            <h2 class="section__title">Welcome to car rent service</h2>
+            <p class="section__description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatum blanditiis esse accusantium dignissimos labore
+              laborum. Veniam, corporis mollitia temporibus, in quaerat vero
+              deleniti amet dolorem repudiandae, pariatur nam dolore! Impedit
+              neque sit ad temporibus quam similique dolor ipsam praesentium
+              sunt.
+            </p>
+
+            <div class="about__section-item d-flex align-items-center">
+              <p class="section__description d-flex align-items-center gap-2">
+                <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                amet.
+              </p>
+
+              <p class="section__description d-flex align-items-center gap-2">
+                <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                amet.
+              </p>
+            </div>
+
+            <div class="about__section-item d-flex align-items-center">
+              <p class="section__description d-flex align-items-center gap-2">
+                <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                amet.
+              </p>
+
+              <p class="section__description d-flex align-items-center gap-2">
+                <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
+                amet.
+              </p>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-lg-6 col-md-6 ps-5">
+          <div class="about__img">
+            <img src="../../../../../assets/bmw-offer.png" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!--  -->
+  <div class="find">
+  <h3>Find Great Deals for Car Rental</h3>
+  <p>We have great offers for daily, weekly and long term rentals. Find the cheapest prices online, for your future Car Rental in 4 quick easy steps. Book now at the lowest possible rates only with a small down payment and pay the rest when you pick up the car.</p>
+  </div>
+  <div class="about">
+  <div class="about-overlay">
+  <div class="about-el">
+    <h3>Flexible Booking Process</h3>
+    <p>No need for huge up-front costs. Search for the best deal for you and book it with only a small</p>
+  </div>
+  <div class="about-el">
+    <h3>Free Extras & Cancellation</h3>
+    <p>No need for huge up-front costs. Search for the best deal for you and book it with only a small</p>
+  </div>
+  <div class="about-el">
+    <h3>Quality & Expertise</h3>
+    <p>No need for huge up-front costs. Search for the best deal for you and book it with only a small</p>
+  </div>
+  </div>
+  </div>
+
+
+

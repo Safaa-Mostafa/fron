@@ -1,0 +1,30 @@
+<mat-toolbar class="color">
+  <button mat-icon-button (click)="menuClicked.emit()"><mat-icon>menu</mat-icon> </button>
+  <h2>Car Rental system</h2>
+  <div class="user-info">
+    <span *ngIf="this.loginFlag" >
+      Hi,
+      {{this.global.userInfo?.name|titlecase}}
+
+    </span>
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+  <mat-menu #userMenu="matMenu">
+    <button  mat-menu-item routerLink="login/">
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+    <button  (click)="handleLogout()" mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+    <button   mat-menu-item routerLink="/users/profile">
+      <mat-icon class="material-icons">account_box</mat-icon>
+      <span>profile</span>
+    </button>
+
+  </mat-menu>
+
+</mat-toolbar>

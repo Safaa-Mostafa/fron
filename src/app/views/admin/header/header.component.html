@@ -1,0 +1,26 @@
+<mat-toolbar class="color">
+  <button mat-icon-button (click)="menuClicked.emit()"><mat-icon>menu</mat-icon> </button>
+  <h2 style="color:#1ba9f5">Car Rental system</h2>
+  <div class="user-info">
+    <span>
+      Hi,
+      {{this.vjv.name}}
+
+    </span>
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+  <mat-menu #userMenu="matMenu">
+
+    <button  mat-menu-item style="cursor:pointer" (click)="handleLogout()"> <mat-icon>logout</mat-icon>
+      <span>Logout</span></button>
+
+    <button   mat-menu-item routerLink="/users/profile">
+      <mat-icon class="material-icons">account_box</mat-icon>
+      <span>profile</span>
+    </button>
+
+  </mat-menu>
+
+</mat-toolbar>
